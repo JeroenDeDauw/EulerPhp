@@ -9,4 +9,10 @@ class CoinSumsTest extends PHPUnit_Framework_TestCase {
 		$this->assertTrue( true );
 	}
 
+	public function testCallGetCoinCombinationCount() {
+		$coinSums = new CoinSums();
+		$count = $coinSums->getCoinCombinationCount( 1 );
+		$this->assertInternalType( 'int', $count );
+	}
+
 }
